@@ -52,7 +52,7 @@ public class CustomView extends View {
                 int offsetY = y - lastY;
 
                 //重新layout
-                layout(getLeft() + offsetX, getTop() + offsetY, getRight() + offsetX, getBottom() + offsetY);
+//                layout(getLeft() + offsetX, getTop() + offsetY, getRight() + offsetX, getBottom() + offsetY);
 
                 //改变偏移量
 //                offsetLeftAndRight(offsetX);
@@ -67,7 +67,7 @@ public class CustomView extends View {
                 //上面几种方式 left top right bottom 属性值发生了改变
 
                 //scrollBy
-//                ((View) getParent()).scrollBy(-offsetX, -offsetY);
+                ((View) getParent()).scrollBy(-offsetX, -offsetY);
                 break;
         }
         return true;
@@ -86,9 +86,9 @@ public class CustomView extends View {
     @Override
     public void computeScroll() {
         super.computeScroll();
-        if(mScroller.computeScrollOffset()) {
+        if (mScroller.computeScrollOffset()) {
             Log.d("Tag", "currx:" + mScroller.getCurrX() + "curry:" + mScroller.getCurrY());
-            ((View)getParent()).scrollTo(mScroller.getCurrX(),mScroller.getCurrY());
+            ((View) getParent()).scrollTo(mScroller.getCurrX(), mScroller.getCurrY());
             invalidate();
         }
     }

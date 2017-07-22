@@ -15,11 +15,12 @@ public class MainActivity extends AppCompatActivity {
 
     public void call(View view) {
         switch (view.getId()) {
-            case R.id.button1:
-
-                break;
-            case R.id.button2:
+            case R.id.btn_1:
                 to(LayoutActivity.class);
+                break;
+
+            case R.id.btn_2:
+
                 break;
         }
     }

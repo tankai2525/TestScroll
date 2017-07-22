@@ -12,16 +12,16 @@
     tools:context="kai.tan.com.testscroll.MainActivity">
 
     <Button
-        android:text="测试1"
+        android:text="View六种滑动方式"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/button1"
+        android:id="@+id/btn_1"
         android:onClick="call"/>
 
     <Button
-        android:text="通过Layou()来滑动View"
+        android:text="测试1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/button2"
+        android:id="@+id/btn_2"
         android:onClick="call"/>
 </LinearLayout>
